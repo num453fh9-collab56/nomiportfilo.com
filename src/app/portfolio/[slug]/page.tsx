@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowRight, CheckCircle2, Mail, MessageCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle2, Mail } from 'lucide-react';
 import SiteNav from '@/components/site-nav';
 import SiteFooter from '@/components/site-footer';
 import { getProject, projects } from '@/lib/projects';
-import { contact, siteUrl, whatsappHref } from '@/lib/site';
+import { contact, siteUrl } from '@/lib/site';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -117,15 +117,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-7 py-3.5 font-semibold text-[#052E16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1FBE5A] hover:shadow-lg hover:shadow-emerald-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-              >
-                <MessageCircle size={18} strokeWidth={2} aria-hidden="true" />
-                Aisa system chahiye?
-              </a>
-              <a
                 href={`mailto:${contact.email}`}
                 className="flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-7 py-3.5 font-semibold text-slate-900 transition-colors hover:border-sky-400 hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
@@ -190,12 +181,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               </p>
             </div>
             <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:${contact.email}`}
               className="flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
             >
-              Baat karein
+              Email karein
               <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
             </a>
           </div>

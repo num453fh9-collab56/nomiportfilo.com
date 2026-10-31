@@ -20,8 +20,6 @@ function normalizeWhatsapp(raw: string) {
 const rawWhatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '03247363219';
 const whatsappNumber = normalizeWhatsapp(rawWhatsapp);
 
-export const whatsappDisplay = `0${whatsappNumber.slice(2, 5)} ${whatsappNumber.slice(5)}`;
-
 const whatsappMessage = encodeURIComponent(
   'Assalam o Alaikum! Mujhe apne business ke liye services ke baare mein baat karni hai.',
 );

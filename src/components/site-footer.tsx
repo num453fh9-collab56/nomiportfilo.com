@@ -1,5 +1,5 @@
-import { ExternalLink, GitBranch, Mail, MessageCircle } from 'lucide-react';
-import { contact, whatsappDisplay, whatsappHref } from '@/lib/site';
+import { ExternalLink, GitBranch, Mail } from 'lucide-react';
+import { contact } from '@/lib/site';
 
 const linkClass =
   'rounded transition-colors hover:text-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white';
@@ -16,15 +16,6 @@ export default function SiteFooter() {
             <a href={`mailto:${contact.email}`} className={`flex items-center gap-2 ${linkClass}`}>
               <Mail size={15} strokeWidth={1.5} aria-hidden="true" />
               {contact.email}
-            </a>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex items-center gap-2 ${linkClass}`}
-            >
-              <MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" />
-              WhatsApp: {whatsappDisplay}
             </a>
           </div>
         </div>

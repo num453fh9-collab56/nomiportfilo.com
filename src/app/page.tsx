@@ -11,7 +11,6 @@ import {
   GraduationCap,
   Mail,
   Megaphone,
-  MessageCircle,
   Sparkles,
   TrendingUp,
   Zap,
@@ -25,7 +24,7 @@ import ServiceIcon from '@/components/service-icon';
 import { services } from '@/lib/services';
 import { projects } from '@/lib/projects';
 import { faqs } from '@/lib/faqs';
-import { contact, whatsappDisplay, whatsappHref } from '@/lib/site';
+import { contact } from '@/lib/site';
 
 const techStack = ['Next.js', 'React', 'JavaScript', 'Python', 'REST APIs', 'Git'];
 
@@ -114,13 +113,11 @@ export default function Portfolio() {
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
                 <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 font-semibold text-[#052E16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1FBE5A] hover:shadow-2xl hover:shadow-emerald-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
+                  href="#contact"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
                 >
-                  <MessageCircle size={18} strokeWidth={2} aria-hidden="true" />
-                  WhatsApp par baat karein
+                  Contact karein
+                  <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
                 </a>
                 <a
                   href="#portfolio"
@@ -208,12 +205,10 @@ export default function Portfolio() {
                 </p>
               </div>
               <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-50 sm:w-auto"
               >
-                WhatsApp par baat karein
+                Contact karein
                 <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
               </a>
             </div>
@@ -534,16 +529,14 @@ export default function Portfolio() {
                 Aam sawalat.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Kuch cheezein clear kar lein — baaki ke liye WhatsApp par pooch lein.
+                Kuch cheezein clear kar lein — baaki ke liye contact form use karein.
               </p>
               <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 font-semibold text-[#052E16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1FBE5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                href="#contact"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
-                <MessageCircle size={18} strokeWidth={2} aria-hidden="true" />
-                Sawal poochein
+                Contact karein
+                <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
               </a>
             </div>
 
@@ -577,23 +570,12 @@ export default function Portfolio() {
                 Seedha raabta karein.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Apne karobar ke liye hum se kaam karwaye — WhatsApp par message karein ya form
-                bharein, main jaldi reply karta hoon.
+                Apne karobar ke liye hum se kaam karwaye — form bharein ya email karein, main
+                jaldi reply karta hoon.
               </p>
-              <p className="mt-2 text-sm font-medium text-slate-700">
-                WhatsApp: {whatsappDisplay} · Email: {contact.email}
-              </p>
+              <p className="mt-2 text-sm font-medium text-slate-700">Email: {contact.email}</p>
 
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-9 py-4 text-base font-bold text-[#052E16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1FBE5A] hover:shadow-2xl hover:shadow-emerald-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
-                >
-                  <MessageCircle size={19} strokeWidth={2} aria-hidden="true" />
-                  WhatsApp par baat karein
-                </a>
+              <div className="mt-8 flex justify-center">
                 <a
                   href="#contact-form"
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-9 py-4 text-base font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"

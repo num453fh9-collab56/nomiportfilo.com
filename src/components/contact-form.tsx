@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { AlertCircle, CheckCircle2, Loader2, Send } from 'lucide-react';
-import { contact, whatsappHref } from '@/lib/site';
+import { contact } from '@/lib/site';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
@@ -203,19 +203,6 @@ export default function ContactForm() {
             </p>
           )}
         </div>
-
-        <p className="text-center text-xs text-slate-500">
-          Ya seedha{' '}
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-sky-700 underline underline-offset-2"
-          >
-            WhatsApp par message karein
-          </a>
-          .
-        </p>
       </form>
     </div>
   );

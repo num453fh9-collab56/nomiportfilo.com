@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Mail, MessageCircle } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import SiteNav from '@/components/site-nav';
 import SiteFooter from '@/components/site-footer';
 import ServiceIcon from '@/components/service-icon';
 import { services } from '@/lib/services';
-import { contact, whatsappDisplay, whatsappHref } from '@/lib/site';
+import { contact } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -99,15 +99,6 @@ export default function ServicesPage() {
               step sirf ek message hai.
             </p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-7 py-3.5 font-semibold text-[#052E16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1FBE5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-50 sm:w-auto"
-              >
-                <MessageCircle size={18} strokeWidth={2} aria-hidden="true" />
-                WhatsApp: {whatsappDisplay}
-              </a>
               <a
                 href={`mailto:${contact.email}`}
                 className="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-7 py-3.5 font-semibold text-slate-900 transition-colors hover:border-sky-400 hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-50 sm:w-auto"

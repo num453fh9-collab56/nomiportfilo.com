@@ -2,9 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, ChevronDown, Menu, MessageCircle, X } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Menu, X } from 'lucide-react';
 import { services } from '@/lib/services';
-import { whatsappHref } from '@/lib/site';
 
 const links = [
   { href: '/#services', label: 'Automation' },
@@ -92,16 +91,6 @@ export default function SiteNav() {
               {link.label}
             </a>
           ))}
-
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-[#052E16] transition-colors hover:bg-[#1FBE5A] ${focusRing}`}
-          >
-            <MessageCircle size={16} strokeWidth={2} aria-hidden="true" />
-            WhatsApp
-          </a>
         </div>
 
         <button
@@ -178,16 +167,6 @@ export default function SiteNav() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 font-semibold text-[#052E16]"
-            >
-              <MessageCircle size={18} strokeWidth={2} aria-hidden="true" />
-              WhatsApp par baat karein
-            </a>
           </div>
         </div>
       )}
