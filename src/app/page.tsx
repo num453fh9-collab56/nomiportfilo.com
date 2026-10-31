@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -6,8 +5,6 @@ import {
   CheckCircle2,
   ChevronDown,
   Code2,
-  ExternalLink,
-  GitBranch,
   GraduationCap,
   Mail,
   Megaphone,
@@ -19,12 +16,10 @@ import SiteNav from '@/components/site-nav';
 import SiteFooter from '@/components/site-footer';
 import HeroBackdrop from '@/components/hero-backdrop';
 import AutomationFlow from '@/components/automation-flow';
-import ContactForm from '@/components/contact-form';
 import ServiceIcon from '@/components/service-icon';
 import { services } from '@/lib/services';
 import { projects } from '@/lib/projects';
 import { faqs } from '@/lib/faqs';
-import { contact } from '@/lib/site';
 
 const techStack = ['Next.js', 'React', 'JavaScript', 'Python', 'REST APIs', 'Git'];
 
@@ -94,7 +89,7 @@ export default function Portfolio() {
             <div className="text-center lg:text-left">
               <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-sky-700 shadow-sm sm:text-xs">
                 <Zap size={14} strokeWidth={2} aria-hidden="true" />
-                Web Development · AI Agents · Meta Ads
+                Web Development Â· AI Agents Â· Meta Ads
               </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tighter text-slate-900 sm:text-5xl md:text-6xl xl:text-7xl">
@@ -113,7 +108,7 @@ export default function Portfolio() {
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
                 >
                   Contact karein
@@ -205,7 +200,7 @@ export default function Portfolio() {
                 </p>
               </div>
               <a
-                href="#contact"
+                href="/contact"
                 className="flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-50 sm:w-auto"
               >
                 Contact karein
@@ -532,7 +527,7 @@ export default function Portfolio() {
                 Kuch cheezein clear kar lein — baaki ke liye contact form use karein.
               </p>
               <a
-                href="#contact"
+                href="/contact"
                 className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 Contact karein
@@ -559,89 +554,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* ========== CONTACT ========== */}
-        <section id="contact" className="border-t border-slate-200 px-6 py-20 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-sky-700">
-                Instant Connection
-              </p>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-                Seedha raabta karein.
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Apne karobar ke liye hum se kaam karwaye — form bharein ya email karein, main
-                jaldi reply karta hoon.
-              </p>
-              <p className="mt-2 text-sm font-medium text-slate-700">Email: {contact.email}</p>
-
-              <div className="mt-8 flex justify-center">
-                <a
-                  href="#contact-form"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-9 py-4 text-base font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
-                >
-                  Contact Us
-                  <ArrowRight size={19} strokeWidth={2} aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-16 grid grid-cols-1 items-start gap-10 md:grid-cols-2">
-              <div className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <Image
-                    src="/me.jpeg"
-                    alt="Numan Ali"
-                    width={56}
-                    height={56}
-                    className="h-14 w-14 rounded-full object-cover ring-2 ring-pink-300"
-                  />
-                  <div>
-                    <p className="font-semibold text-slate-900">{contact.name}</p>
-                    <p className="text-sm text-slate-600">
-                      AI Automation &amp; Full-Stack Developer
-                    </p>
-                  </div>
-                </div>
-                <p className="text-base font-light leading-relaxed text-slate-600">
-                  Koi project ya business goal mind mein hai? Batayein — automation, ads, ya web
-                  development, main aap ke liye sahi system design karta hoon.
-                </p>
-                <div className="space-y-4">
-                  <a
-                    href={`mailto:${contact.email}`}
-                    className="flex items-center gap-4 rounded-lg text-slate-600 transition-colors hover:text-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <Mail size={20} strokeWidth={1.5} aria-hidden="true" />
-                    <span className="text-sm font-medium">{contact.email}</span>
-                  </a>
-                  <a
-                    href={contact.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-lg text-slate-600 transition-colors hover:text-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <GitBranch size={20} strokeWidth={1.5} aria-hidden="true" />
-                    <span className="text-sm font-medium">github.com/num453fh9-collab56</span>
-                  </a>
-                  <a
-                    href={contact.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-lg text-slate-600 transition-colors hover:text-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <ExternalLink size={20} strokeWidth={1.5} aria-hidden="true" />
-                    <span className="text-sm font-medium">linkedin.com/in/nauman-ali</span>
-                  </a>
-                </div>
-              </div>
-
-              <div id="contact-form">
-                <ContactForm />
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />

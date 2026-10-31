@@ -9,7 +9,7 @@ const links = [
   { href: '/#services', label: 'Automation' },
   { href: '/#portfolio', label: 'Portfolio' },
   { href: '/#faq', label: 'FAQ' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const focusRing =
